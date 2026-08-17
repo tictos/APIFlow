@@ -3,7 +3,8 @@
 <div align="center">
 
   <!-- Logo / Hero Banner Placeholder -->
-  <img src="docs/images/banner.png" alt="PostBoy Banner" width="100%" style="border-radius: 12px;" onerror="this.src='https://placehold.co/1200x400/0E0F12/3B82F6?text=PostBoy+%7C+Mobile+API+Client+%26+Debugger'; this.style.borderRadius='12px';" />
+  <img width="1376" height="768" alt="screen" src="https://github.com/user-attachments/assets/3166a988-e52b-424d-a37b-40320ba179ad" />
+
 
   <br/><br/>
 
