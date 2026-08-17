@@ -18,7 +18,7 @@
   </p>
 
   <p align="center">
-    Développé avec passion par <strong>Mamadou Bobo Diallo (Tictos)</strong>
+    💡 Conçu et développé par <strong>Mamadou Bobo Diallo (Tictos)</strong> en collaboration avec l'<strong>Intelligence Artificielle (IA)</strong>.
   </p>
 
 </div>
@@ -31,8 +31,17 @@
 | :--- | :--- |
 | **Surnom / Pseudo** | **Tictos** |
 | **Rôle** | Concepteur & Développeur Android / Mobile |
+| **Méthodologie** | Développement moderne assisté par l'**Intelligence Artificielle (IA)** |
 | **Spécialités** | Kotlin, Jetpack Compose, Architecture Android moderne (MVVM / Clean Architecture), Intégrations API & UI/UX Design |
-| **Portfolio / Contact** | [![Email](https://img.shields.io/badge/Contact-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamadoudiallo1213@gmail.com) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/) |
+| **Portfolio / Contact** | [![Email](https://img.shields.io/badge/Contact-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:tictos1213@gmail.com) [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/) |
+
+---
+
+## 🤖 Conception & Collaboration avec l'IA
+
+Ce projet illustre une approche novatrice du développement logiciel moderne :
+- **Architecture & Code** : Structuré et raffiné avec l'assistance de modèles d'IA générative pour accélérer le prototypage, optimiser les algorithmes (coloration syntaxique JSON, gestionnaires asynchrones) et respecter les meilleures pratiques Android & Material Design 3.
+- **Direction Artistique & Logique Métier** : Conçues et orchestrées par **Mamadou Bobo Diallo (Tictos)** pour offrir une expérience utilisateur fluide, robuste et intuitive.
 
 ---
 
@@ -170,7 +179,7 @@ PostBoy/
 Les suggestions et contributions sont les bienvenues ! Pour toute question, proposition d'amélioration ou opportunité professionnelle :
 
 - **Auteur** : Mamadou Bobo Diallo (**Tictos**)
-- **Email** : [mohamadoudiallo1213@gmail.com](mailto:mohamadoudiallo1213@gmail.com)
+- **Email** : [tictos1213@gmail.com](mailto:tictos1213@gmail.com)
 
 ---
 
