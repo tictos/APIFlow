@@ -102,7 +102,7 @@ fun ApiFlowApp(viewModel: ApiViewModel) {
                             }
                             Spacer(modifier = Modifier.width(12.dp))
                             Text(
-                                text = "API Debugger",
+                                text = "PostBoy",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp,
                                 color = Color.White

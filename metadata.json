@@ -1,6 +1,6 @@
 {
-  "name": "APIFlow",
-  "description": "Alternative légère à Postman pour mobile. Testez, déboguez et sauvegardez vos requêtes HTTP/HTTPS facilement.",
+  "name": "PostBoy",
+  "description": "PostBoy - Client HTTP & Débugueur d'API REST moderne pour Android conçu par Mamadou Bobo Diallo (Tictos).",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
