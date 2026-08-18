@@ -52,7 +52,15 @@ Ce projet illustre une approche novatrice du développement logiciel moderne :
 
 | 1. Constructeur de Requête | 2. Visualiseur de Réponse | 3. Collections & Projets | 4. Variables d'Environnement |
 | :---: | :---: | :---: | :---: |
-| <img src="docs/images/screenshot_builder.png" alt="Request Builder" width="220" onerror="this.src='https://placehold.co/300x650/111216/3B82F6?text=1.+Request+Builder';" /> | <img src="docs/images/screenshot_response.png" alt="Response Viewer" width="220" onerror="this.src='https://placehold.co/300x650/111216/10B981?text=2.+Response+Viewer';" /> | <img src="docs/images/screenshot_collections.png" alt="Collections" width="220" onerror="this.src='https://placehold.co/300x650/111216/EF4444?text=3.+Collections';" /> | <img src="docs/images/screenshot_env.png" alt="Environments" width="220" onerror="this.src='https://placehold.co/300x650/111216/F59E0B?text=4.+Environments';" /> |
+| <img width="1080" height="2400" alt="1000253486" src="https://github.com/user-attachments/assets/066d9c8a-3a3a-4e0f-8c7e-d8b3fe0d3750" />
+
+| <img width="1080" height="2400" alt="1000255463" src="https://github.com/user-attachments/assets/19595b95-942a-416d-a855-55487e7b67b1" />
+
+ | <img width="1080" height="2400" alt="1000253487" src="https://github.com/user-attachments/assets/f08a1236-917f-4020-94a5-13ea718cafdf" />
+
+| <img width="1080" height="2400" alt="1000253488" src="https://github.com/user-attachments/assets/ecdbade6-2361-4401-864d-e5d690c98f12" />
+
+|
 
 </div>
 
