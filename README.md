@@ -2,9 +2,8 @@
 
 <div align="center">
 
-  <!-- Logo / Hero Banner Placeholder -->
-  <img width="1376" height="768" alt="screen" src="https://github.com/user-attachments/assets/3166a988-e52b-424d-a37b-40320ba179ad" />
-
+  <!-- Logo / Hero Banner -->
+  <img width="100%" alt="PostBoy Banner" src="https://github.com/user-attachments/assets/3166a988-e52b-424d-a37b-40320ba179ad" style="border-radius: 12px;" />
 
   <br/><br/>
 
@@ -52,15 +51,7 @@ Ce projet illustre une approche novatrice du développement logiciel moderne :
 
 | 1. Constructeur de Requête | 2. Visualiseur de Réponse | 3. Collections & Projets | 4. Variables d'Environnement |
 | :---: | :---: | :---: | :---: |
-| <img width="1080" height="2400" alt="1000253486" src="https://github.com/user-attachments/assets/066d9c8a-3a3a-4e0f-8c7e-d8b3fe0d3750" />
-
-| <img width="1080" height="2400" alt="1000255463" src="https://github.com/user-attachments/assets/19595b95-942a-416d-a855-55487e7b67b1" />
-
- | <img width="1080" height="2400" alt="1000253487" src="https://github.com/user-attachments/assets/f08a1236-917f-4020-94a5-13ea718cafdf" />
-
-| <img width="1080" height="2400" alt="1000253488" src="https://github.com/user-attachments/assets/ecdbade6-2361-4401-864d-e5d690c98f12" />
-
-|
+| <img src="https://github.com/user-attachments/assets/066d9c8a-3a3a-4e0f-8c7e-d8b3fe0d3750" width="220" alt="1. Request Builder" /> | <img src="https://github.com/user-attachments/assets/19595b95-942a-416d-a855-55487e7b67b1" width="220" alt="2. Response Viewer" /> | <img src="https://github.com/user-attachments/assets/f08a1236-917f-4020-94a5-13ea718cafdf" width="220" alt="3. Collections" /> | <img src="https://github.com/user-attachments/assets/ecdbade6-2361-4401-864d-e5d690c98f12" width="220" alt="4. Environments" /> |
 
 </div>
 
