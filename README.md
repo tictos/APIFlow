@@ -111,6 +111,10 @@ Exportez instantanément votre requête active vers le langage ou la bibliothèq
 
 ## 🏗️ Architecture & Technologies Utilisées
 
+L'application est conçue selon les standards de développement Android modernes, garantissant performance, réactivité et maintenabilité :
+
+> **Architecture respectant le pattern MVVM (Model-View-ViewModel) avec Jetpack Compose pour l'IHM et des Coroutines Kotlin pour l'asynchronisme.**
+
 ```
 PostBoy/
 │
@@ -120,24 +124,42 @@ PostBoy/
 │   └── Theme (Dark IDE Palette, Custom Typography)
 │
 ├── 🧠 State & ViewModel (MVVM)
-│   └── ApiViewModel (StateFlow, Coroutines, Gestion réactive de l'UI)
+│   └── ApiViewModel (StateFlow, Coroutines, Gestion réactive de l'UI & Jobs)
 │
 ├── 🌐 Network Engine
-│   ├── HttpExecutor (Moteur d'exécution OkHttp 4)
+│   ├── HttpExecutor (Moteur d'exécution OkHttp 4 sur Dispatchers.IO)
 │   └── Network Fallback (Simulation & mode hors-ligne résilient)
 │
 └── 💾 Local Data Persistence (Room Database)
     ├── Entities (CollectionEntity, SavedRequestEntity, HistoryEntity)
-    └── DAOs (Accès asynchrone sécurisé via KSP)
+    └── DAOs (Accès asynchrone sécurisé via KSP & Flow réactifs)
 ```
+
+---
+
+### ⚡ Structure du Code & Gestion de l'Asynchronisme
+
+1. **Pattern MVVM (Model-View-ViewModel)** :
+   - **View (IHM)** : Conçue entièrement en **Jetpack Compose**, l'interface est 100% déclarative, réactive et observe les états immuables exposés par le ViewModel sans bloquer le thread principal (*Main Thread*).
+   - **ViewModel (`ApiViewModel`)** : Centralise la logique métier et orchestre les flux d'états à l'aide de `StateFlow` (`currentTab`, `requestState`, `responseResult`, `isLoading`).
+   - **Model & Repository (`ApiRepository`)** : Fait le pont entre les sources de données locales (Room) et le moteur réseau (OkHttp), isolant complètement la gestion des données.
+
+2. **Asynchronisme avec Coroutines Kotlin & Flow** :
+   - **Exécution Réseau Déportée (`Dispatchers.IO`)** : Tous les appels HTTP/HTTPS et la résolution DNS sont exécutés sur des threads d'arrière-plan optimisés (`Dispatchers.IO`) via `HttpExecutor` pour garantir une interface fluide à 60/120 FPS.
+   - **Flux Réactifs (`Flow` & `StateFlow`)** : La base de données Room expose des `Flow<List<T>>` qui émettent automatiquement de nouvelles données vers l'UI dès qu'une modification survient (ajout à l'historique, création d'une collection).
+   - **Contrôle du Cycle de Vie & Annulation (`viewModelScope` & `Job`)** : Les requêtes HTTP sont rattachées au `viewModelScope` et peuvent être annulées à tout moment (`Job.cancel()`) sans fuite de mémoire si l'utilisateur annule la requête ou en lance une nouvelle.
+   - **Gestion Robuste des Erreurs et Timeouts** : Prise en charge asynchrone des exceptions réseau (`SocketTimeoutException`, `UnknownHostException`) avec basculement intelligent sans blocage de l'application.
+
+---
 
 | Composant | Technologie / Librairie | Rôle |
 | :--- | :--- | :--- |
 | **Langage** | **Kotlin 2.0+** | Développement Android 100% natif |
 | **UI Toolkit** | **Jetpack Compose & Material 3** | Interface déclarative, réactive et moderne |
-| **Concurrence** | **Kotlin Coroutines & StateFlow** | Gestion asynchrone des flux et appels réseau non-bloquants |
+| **Architecture** | **MVVM + Clean Repository** | Séparation claire des responsabilités |
+| **Asynchronisme & Flux** | **Kotlin Coroutines, StateFlow & Flow** | Traitements réseau et base de données non-bloquants |
 | **Moteur Réseau** | **OkHttp 4** | Gestion des requêtes HTTP/HTTPS, compression et headers |
-| **Persistance** | **Room Database + KSP** | Stockage SQLite local des collections, requêtes et historiques |
+| **Persistance** | **Room Database + KSP** | Stockage SQLite local asynchrone (Collections, Requêtes, Historique) |
 | **Design** | **Custom Dark IDE Theme** | Palette sombre professionnelle inspirée des IDEs de référence |
 
 ---

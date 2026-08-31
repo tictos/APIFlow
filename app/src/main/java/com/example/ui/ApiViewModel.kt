@@ -21,6 +21,8 @@ import com.example.data.model.PresetApiSample
 import com.example.data.model.QueryParam
 import com.example.data.network.ApiRepository
 import com.example.data.network.HttpExecutor
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -79,19 +81,41 @@ class ApiViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    private var activeRequestJob: Job? = null
+
     fun selectTab(tab: AppNavigationTab) {
         _currentTab.value = tab
     }
 
     fun sendRequest() {
-        if (_isLoading.value) return
-        viewModelScope.launch {
+        if (_isLoading.value) {
+            cancelRequest()
+        }
+        activeRequestJob = viewModelScope.launch {
             _isLoading.value = true
             _responseResult.value = null
-            val result = repository.executeRequest(_requestState.value)
-            _responseResult.value = result
-            _isLoading.value = false
+            try {
+                val result = repository.executeRequest(_requestState.value)
+                _responseResult.value = result
+            } catch (e: CancellationException) {
+                // Request cancelled by user
+            } catch (e: Exception) {
+                _responseResult.value = ApiResponseResult(
+                    statusCode = 0,
+                    statusMessage = "Erreur",
+                    isSuccessful = false,
+                    errorMessage = e.localizedMessage ?: "Erreur inconnue lors de l'exécution"
+                )
+            } finally {
+                _isLoading.value = false
+            }
         }
+    }
+
+    fun cancelRequest() {
+        activeRequestJob?.cancel()
+        activeRequestJob = null
+        _isLoading.value = false
     }
 
     fun updateMethod(method: HttpMethod) {
